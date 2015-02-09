@@ -9,11 +9,12 @@ number_of_cards = 4
 cards = [[0,0]]*number_of_cards        ## creates list, each item represents a card with another list [0,0]
                                        ##where the first number is the number of the card and the second is the color'''
 
-numbers = range(1,6)
-colors = [blue, green, pink, white, yellow]     
+def deck():
+	numbers = range(1,6)
+	colors = ["blue", "green", "pink", "white", "yellow"]     
+	cards = [[j for j in numbers] for i in colors]
+	print cards
 
-
-
-for i in cards:						## MM: Need to create the deck with all colors / numbers
-
+deck()
+	
 
