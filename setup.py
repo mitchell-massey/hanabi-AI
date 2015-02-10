@@ -19,13 +19,13 @@ known_card_properties = [[0,0],[0,0],[0,0],[0,0],[0,0]] ## represents known numb
 
 def known_cards_check(hand_of_cards,known_card_properties): ##checks if any cards are known, updates known card properties
     x_count = -1
-    for x in hand_of_cards:
+    for x in hand_of_cards:  #parsing though each card
         x_count += 1
         y_count = -1
-        for y in x:
+        for y in x:         #parsing through numbers and then colors
             y_count += 1
             if y.count(True) == 1:
-                known_card_properties[x_count][y_count] = y.index(True) + 1
+                known_card_properties[x_count][y_count] = y.index(True) + 1 #writes value of 1-5 for known property
 
             
 ##def check_for_play():                                   ##checks to see if a card in hand is playable
